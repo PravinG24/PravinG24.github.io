@@ -26,7 +26,7 @@ Here is the tech stack I engineered to make it happen:
 * **The Intelligence Arsenal (Active & Passive Recon):** The Bash script is programmed to pull from a highly specific stack of tools:
   * **Active Footprinting:** Nmap for localized service discovery and OS fingerprinting.
   * **Passive OSINT:** Shodan for external attack surface mapping and historical banner grabbing.
-  * **The Threat Intel Pipeline:** I integrated a multi-layered API stack including VirusTotal and AbuseIPDB for reputation scoring, ThreatFox to cross-reference IPs against known active C2/botnet infrastructure, and most importantly, GreyNoise to filter out benign "internet weather" and mass-scanners.
+  * **The Threat Intel Pipeline:** I integrated a multi-layered API stack including IPinfo for immediate ASN and ISP routing context, VirusTotal and AbuseIPDB for reputation scoring, ThreatFox to cross-reference IPs against known active C2/botnet infrastructure, and most importantly, GreyNoise to filter out benign "internet weather" and mass-scanners.
 
 * **The Orchestrator (Python/Flask & Bash):** The brain of the operation is a lightweight Python Flask server running in my homelab. When it receives an authenticated strike command, it triggers a hardened Bash script that orchestrates a massive concurrent data pull—firing active Nmap footprinting while scraping passive telemetry from GreyNoise, AbuseIPDB, and ThreatFox.
 
