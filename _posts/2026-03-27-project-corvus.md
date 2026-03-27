@@ -26,13 +26,13 @@ Here is the tech stack I engineered to make it happen:
 
 •	The Orchestrator (Python/Flask & Bash): The brain of the operation is a lightweight Python Flask server running in my homelab. When it receives an authenticated strike command, it triggers a hardened Bash script that orchestrates a massive concurrent data pull—firing active Nmap footprinting while scraping passive telemetry from GreyNoise, AbuseIPDB, and ThreatFox.
 > **Under the Hood:** Before wrapping the tool in a mobile web interface, the core orchestration engine was engineered and tested entirely via the command line. Here is the raw Bash pipeline successfully resolving targets and extracting API telemetry.
-![Project CORVUS CLI Execution](/assets/lib/cli-execution.png)
+![Project CORVUS CLI Execution](/assets/cli-execution.png)
 
 •	The "Force Multiplier" (AI Synthesis via NVIDIA NIM): Raw API JSON data from six different sources is completely unreadable on the fly. Instead of relying on slow, consumer-grade web AI, I engineered a direct integration with the NVIDIA NIM API, specifically leveraging the high-speed Step Flash 3.5 model. By utilizing NIM's low-latency microservices and applying strict prompt engineering, the AI bypasses standard conversational guardrails to instantly ingest, sanitize, and synthesize the asynchronous telemetry. Within milliseconds, it outputs a highly readable, actionable "Target Dossier" directly to my terminal.
 
 •	The Field Console (PWA): I built a mobile-first Progressive Web App using HTML5/CSS3 and Vanilla JS. It lives on my phone’s home screen as a standalone, edge-to-edge terminal interface.
 > **The Operator's View:** The custom PWA interface running over a 5G connection. This decouples the reconnaissance phase from a traditional laptop, allowing for discreet, on-the-go intelligence gathering.
-![Project CORVUS Mobile UI](/assets/lib/mobile-app-ui.jpeg)
+![Project CORVUS Mobile UI](/assets/mobile-app-ui.jpeg)
 
 ### Live Fire Exercises: Operational Output
 
@@ -42,32 +42,32 @@ To validate the pipeline's fidelity and the AI's ability to distinguish between 
 > **Target:** `192.168.x.1` (Local Router)
 > **Objective:** Verify that the AI correctly identifies private RFC 1918 IP space and does not hallucinate external threat intelligence data for internal network nodes.
 > **Result:** Pipeline successfully profiled the local hardware without triggering false-positive alerts from external APIs.
-![Local Router Output](/assets/lib/router-test-1.jpeg)
-![Local Router Output 2](/assets/lib/router-test-2.jpeg)
+![Local Router Output](/assets/router-test-1.jpeg)
+![Local Router Output 2](/assets/router-test-2.jpeg)
 
 
 #### Test 2: Active Command & Control Node (Malicious IP)
 > **Target:** `[Redacted Cobalt Strike C2 IP]`
 > **Objective:** Test the asynchronous threat intel pipeline against a live, known-malicious adversary node.
 > **Result:** ThreatFox and AbuseIPDB successfully flagged the host. The NVIDIA NIM model synthesized the raw JSON into a highly readable, "SUSPICIOUS" threat dossier instantly.
-![Malicious IP Output](/assets/lib/malicious-ip-test-1.jpeg)
-![Malicious IP Output 2](/assets/lib/malicious-ip-test-2.jpeg)
+![Malicious IP Output](/assets/malicious-ip-test-1.jpeg)
+![Malicious IP Output 2](/assets/malicious-ip-test-2.jpeg)
 
 
 #### Test 3: The Benign Domain (Google)
 > **Target:** `google.com`
 > **Objective:** Verify rapid DNS resolution and ensure that massive, globally distributed infrastructure is accurately categorized as safe internet weather.
 > **Result:** DNS resolved perfectly. GreyNoise and VirusTotal returned clean bills of health, and the AI formatted a low-priority, benign intelligence report.
-![Google DNS Output](/assets/lib/google-test-1.jpeg)
-![Google DNS Output 2](/assets/lib/google-test-2.jpeg)
+![Google DNS Output](/assets/google-test-1.jpeg)
+![Google DNS Output 2](/assets/google-test-2.jpeg)
 
 
 #### Test 4: The Wormhole (Sinkholed Ransomware Domain)
 > **Target:** `iuqerfsodp9ifjaposdfjhgosurijfaewrwergwea.com` (WannaCry Killswitch)
 > **Objective:** Feed the pipeline one of the most infamous, high-alert domains in history to test the AI's extreme-threat formatting.
 > **Result:** The DNS resolution succeeded, triggering alerts across the OSINT stack. The AI parsed the historical ransomware association and generated a pristine dossier.
-![WannaCry Output](/assets/lib/wannacry-test-1.jpeg)
-![WannaCry Output 2](/assets/lib/wannacry-test-2.jpeg)
+![WannaCry Output](/assets/wannacry-test-1.jpeg)
+![WannaCry Output 2](/assets/wannacry-test-2.jpeg)
 
 
 ---
