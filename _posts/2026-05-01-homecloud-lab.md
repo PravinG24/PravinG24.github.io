@@ -80,7 +80,6 @@ Using **Tailscale**, I created an encrypted tunnel that allows me to mount the `
 ## Phase 5: Automated Sync Engine
 To keep my local work safe, I developed a **PowerShell script** that utilizes **Robocopy** for multi-threaded, incremental backups. 
 ```powershell
-### High-speed sync from TUF Daily Driver to the DC-01 Vault
 foreach ($Source in $Sources) {
     robocopy $Source $TargetDir /MIR /MT:32 /R:3 /W:5 /LOG+:"C:\Users\Pravin\backup_log.txt"
 }
