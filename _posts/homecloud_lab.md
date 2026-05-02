@@ -1,6 +1,6 @@
 ---
 title: "HomeCloud Lab: AD-Managed Identity & SIEM-Audited Storage"
-date: 2026-05-01
+date: 2026-05-02
 categories: [Cybersecurity, Systems Administration]
 tags: [Active Directory, Wazuh, SIEM, Infrastructure, Automation]
 ---
