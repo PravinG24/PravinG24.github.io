@@ -5,7 +5,7 @@ categories: [Cybersecurity, Systems Administration]
 tags: [Active Directory, Wazuh, SIEM, Infrastructure, Automation]
 ---
 
-# HomeCloud Lab: Building an Enterprise-Grade Storage Mesh 🛡️☁️
+# HomeCloud Lab: Building an Enterprise-Grade Storage Mesh 
 
 Modern cybersecurity isn't just about blocking hackers; it’s about **Visibility**, **Identity**, and **Redundancy**. 
 
@@ -13,7 +13,7 @@ Modern cybersecurity isn't just about blocking hackers; it’s about **Visibilit
 
 ---
 
-## 🏗️ The Architecture
+## The Architecture
 The lab follows a hub-and-spoke model, utilizing a "Zero-Trust" approach by keeping management interfaces and identity controllers isolated from the physical hardware.
 
 *   **The Identity Provider:** Windows Server VM (**DC-01**) running Active Directory.
@@ -23,7 +23,7 @@ The lab follows a hub-and-spoke model, utilizing a "Zero-Trust" approach by keep
 
 ---
 
-## 🔑 Phase 1: Identity & Access (Active Directory)
+## Phase 1: Identity & Access (Active Directory)
 The core of the lab is **Centralized Identity**. By promoting the VM to a Domain Controller, I moved away from insecure local accounts and implemented **Role-Based Access Control (RBAC)**.
 
 I created a dedicated security group for cloud access, ensuring that even if a device is connected to the network, it cannot view files without valid Domain credentials.
@@ -33,7 +33,7 @@ I created a dedicated security group for cloud access, ensuring that even if a d
 
 ---
 
-## 💾 Phase 2: Storage Isolation & Security
+## Phase 2: Storage Isolation & Security
 In an enterprise environment, you never mix OS files with Data files. I partitioned a dedicated **F: Drive** (900GB+) to isolate my cloud storage. 
 
 > **[Disk Management showing the C: OS partition and the dedicated F: volume]**
@@ -51,7 +51,7 @@ Security is handled at two layers. To access the cloud, a user must pass:
 
 ---
 
-## 🛡️ Phase 3: SIEM Integration (Wazuh)
+## Phase 3: SIEM Integration (Wazuh)
 Visibility is the heartbeat of this project. I installed the **Wazuh Agent** on the Windows VM to monitor the `S:\HomeCloud` directory.
 
 ### The Audit Configuration
@@ -69,7 +69,7 @@ Before any data was moved, I verified the heartbeat between the Windows VM and t
 
 ---
 
-## 🌐 Phase 4: The Mobile & Daily Driver Mesh
+## Phase 4: The Mobile & Daily Driver Mesh
 Using **Tailscale**, I created an encrypted tunnel that allows me to mount the `CloudStorage` share on my phone and my TUF laptop simultaneously. 
 
 *   **On the daily driver laptop:** Mapped as a persistent `Z:` drive.
@@ -77,7 +77,7 @@ Using **Tailscale**, I created an encrypted tunnel that allows me to mount the `
 
 ---
 
-## 🚀 Phase 5: Automated Sync Engine
+## Phase 5: Automated Sync Engine
 To keep my local work safe, I developed a **PowerShell script** that utilizes **Robocopy** for multi-threaded, incremental backups. 
 ```powershell
 # High-speed sync from TUF Daily Driver to the DC-01 Vault
