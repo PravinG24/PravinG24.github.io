@@ -45,8 +45,8 @@ Security is handled at two layers. To access the cloud, a user must pass:
 2.  **NTFS Permissions:** Controls local file-level actions (Read/Write/Modify).
 
 > **[IMAGE PLACEHOLDER: Folder Properties showing the 'Sharing' and 'Security' (NTFS) permissions tabs side-by-side]**
-![Sharing Permissions](/assets/lib/share_permissions.png)
-![Security Permissions](/assets/lib/sec_permissions.png)
+![Sharing Permissions](/assets/share_permissions.png)
+![Security Permissions](/assets/sec_permissions.png)
 
 
 ---
@@ -58,14 +58,14 @@ Visibility is the heartbeat of this project. I installed the **Wazuh Agent** on 
 I configured the agent to use **Real-time File Integrity Monitoring (FIM)**. This ensures that the moment a file is created, modified, or deleted, an alert is generated on the Wazuh Dashboard.
 
 > **[IMAGE PLACEHOLDER: Screenshot of the 'ossec.conf' file highlighting the FIM directory monitoring block]**
-![ossec file](/assets/lib/ossec.png)
+![ossec file](/assets/ossec.png)
 
 
 ### Agent Telemetry
 Before any data was moved, I verified the heartbeat between the Windows VM and the MSI Host (Manager).
 
 > **[IMAGE PLACEHOLDER: Wazuh Agent Status showing the Windows VM 'Active' and 'Running']**
-![Wazuh agent](/assets/lib/Wazuh%20Agent.png)
+![Wazuh agent](/assets/Wazuh%20Agent.png)
 
 ---
 
