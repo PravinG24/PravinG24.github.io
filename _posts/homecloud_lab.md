@@ -37,7 +37,7 @@ I created a dedicated security group for cloud access, ensuring that even if a d
 In an enterprise environment, you never mix OS files with Data files. I partitioned a dedicated **F: Drive** (900GB+) to isolate my cloud storage. 
 
 > **[Disk Management showing the C: OS partition and the dedicated F: volume]**
-![Disk Partition](/assets/lib/disk%20partition.png)
+![Disk Partition](/assets/disk%20partition.png)
 
 ### The "Double-Gate" Permission Model
 Security is handled at two layers. To access the cloud, a user must pass:
