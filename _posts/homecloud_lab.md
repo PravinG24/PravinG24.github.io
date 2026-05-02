@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "HomeCloud Lab: AD-Managed Identity & SIEM-Audited Storage"
 date: 2026-05-01
 categories: [Cybersecurity, Systems Administration]
