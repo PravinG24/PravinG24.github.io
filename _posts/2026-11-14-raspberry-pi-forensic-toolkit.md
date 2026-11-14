@@ -5,8 +5,6 @@ categories: [Architecture, Forensics, Red Teaming, Network]
 tags: [Raspberry-Pi, Tailscale, Kotlin, PowerShell]
 ---
 
-# Building a Raspberry-Pi Forensic Toolkit (And Trying Not to Melt It)
-
 Clicking through pre-configured virtual simulations in a digital forensics lab isn't exactly the thrilling, high-stakes hacker montage we all hoped for when choosing a cybersecurity major. Professional forensic hardware is notoriously expensive, and most students graduate with a gap in practical, hands-on evidence acquisition. For my Final Year Project, I decided to fix that by building a Raspberry Pi-Based Forensic Toolkit—an affordable, portable, and entirely ethical digital extraction platform.
 
 The dream was ambitious but straightforward: create an Integrated Mobile Forensic Ecosystem (IMFE) where I could walk up to a target Windows machine, automatically extract password hashes, and crack them, all while coordinating the entire operation from an Android smartphone. I essentially wanted to build a forensic lab that fits in a backpack.
