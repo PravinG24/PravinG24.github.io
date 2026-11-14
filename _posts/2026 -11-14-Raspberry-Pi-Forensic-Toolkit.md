@@ -53,4 +53,4 @@ Here, the extracted NTLM hashes and target file structures (like AppData and Doc
 
 Building this was a massive journey in adapting on the fly, learning to respect hardware limitations, and realizing that sometimes, delegating the math to an RTX 3070 is the only way to stay sane. The toolkit successfully bridged the gap between forensic theory and reality, proving that you don't need an unlimited budget to do advanced data recovery—just a Raspberry Pi, an Android phone, and a high tolerance for troubleshooting.
 
-*(You can check out a sanitized, API-stripped version of the code on my GitHub here: [https://github.com/PravinG24/Raspberry-Pi-Based-Forensic-Toolkit])*
+*(You can check out the sanitized, API-stripped version of the code on my GitHub here: [https://github.com/PravinG24/Raspberry-Pi-Based-Forensic-Toolkit])*
